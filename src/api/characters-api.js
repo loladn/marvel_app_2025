@@ -1,3 +1,5 @@
+// src/api/characters-api.js
+
 import characters from '../data/characters.json'
 
 // Default order by and order
@@ -32,4 +34,8 @@ export const getCharacterById = (id) => {
         throw new Error(`Character with id ${id} not found`);
     }
     return character;
+  if (!character) {
+    throw new Error(`Character with id ${id} not found`);
+  }
+  return character;
 }
